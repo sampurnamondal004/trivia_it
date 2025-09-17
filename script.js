@@ -21,6 +21,7 @@ exit_btn.onclick = ()=>{
 }
 
 continue_btn.onclick = ()=>{
+    console.log("Continue clicked");
     info_box.classList.remove("activeInfo"); 
     quiz_box.classList.add("activeQuiz"); 
     showQuetions(0); 
