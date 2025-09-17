@@ -100,12 +100,12 @@ function queCounter(index){
 function startTimer(time){
     counter = setInterval(timer, 1000);
     function timer(){
-        timeCount.textContent = time; 
-        time--; 
-        if(time < 9){ 
-            let addZero = timeCount.textContent; 
-            timeCount.textContent = "0" + addZero; 
+        if(time < 10 && time >= 0){ 
+            timeCount.textContent = "0" + time; 
+        } else {
+            timeCount.textContent = time;
         }
+        time--; 
         if(time < 0){ 
             clearInterval(counter); 
             timeText.textContent = "Time Off"; 
@@ -125,6 +125,7 @@ function startTimer(time){
         }
     }
 }
+
 
 function startTimerLine(time){
     counterLine = setInterval(timer, 29);
